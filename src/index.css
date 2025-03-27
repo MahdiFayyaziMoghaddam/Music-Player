@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+* {
+  font-family: "source-sans", sans-serif;
+}
+
+:root {
+  --primary-color: #cd3232;
+  --secondary-color: #8a2525;
+  --dark-900-color: #1a202c;
+  --dark-800-color: #212935;
+  --dark-700-color: #4a525a;
+  --dark-600-color: #67737a;
+  --dark-500-color: #8798a1;
+  --dark-400-color: #bac4d0;
+  --dark-300-color: #dad8e4;
+  --dark-200-color: #eaeef8;
+  --dark-100-color: #edf2f7;
+  --navbar-height: 4rem;
+  --controls-height: 8rem;
+}
+
+@theme {
+  --color-primary: var(--primary-color);
+  --color-secondary: var(--secondary-color);
+  --color-dark-900: var(--dark-900-color);
+  --color-dark-800: var(--dark-800-color);
+  --color-dark-700: var(--dark-700-color);
+  --color-dark-600: var(--dark-600-color);
+  --color-dark-500: var(--dark-500-color);
+  --color-dark-400: var(--dark-400-color);
+  --color-dark-300: var(--dark-300-color);
+  --color-dark-200: var(--dark-200-color);
+  --color-dark-100: var(--dark-100-color);
+  --breakpoint-xs: 320;
+  --breakpoint-sm: 480;
+  --breakpoint-md: 768;
+  --breakpoint-lg: 1024;
+  --breakpoint-xl: 1280;
+  --breakpoint-2xl: 1536;
+  --breakpoint-3xl: 1710;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--color-dark-900);
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+  max-height: calc(100vh - var(--controls-height) - var(--navbar-height));
+  width: 100%;
+  background-color: var(--color-dark-900);
+}
+
+*::selection {
+  background-color: var(--primary-color);
+  color: var(--color-dark-100);
+}
+
+*::-webkit-scrollbar {
+  appearance: none;
+  width: 0.6rem;
+  background-color: var(--color-dark-700);
+  border-radius: 0.2rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 0.2rem;
+}
+
+  @font-face {
+    font-family: 'source-sans';
+    src: './font/SourceSans3';
+  }
+
+@utility flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@utility dir-rtl {
+  direction: rtl;
+}
+
+@utility dir-ltr {
+  direction: ltr;
+}
+
+@utility border-primary {
+  border: 1px solid var(--color-primary);
+}
+
+@utility border-t-primary {
+  border-top: 1px solid var(--color-primary);
+}
+
+@utility border-r-primary {
+  border-right: 1px solid var(--color-primary);
+}
+
+@utility border-l-primary {
+  border-left: 1px solid var(--color-primary);
+}
+
+@utility border-b-primary {
+  border-bottom: 1px solid var(--color-primary);
+}
+
+/* @font-face {
+  font-family: "source-sans-pro";
+  src: url("/fonts/source-sans-pro.woff2") format("woff2");
+} */
