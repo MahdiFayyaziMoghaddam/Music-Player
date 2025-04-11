@@ -1,3 +1,4 @@
+"use client";
 import {
   Context,
   createContext,
@@ -62,7 +63,9 @@ const StateReducer: (state: States, action: Actions) => States = (
     }
 
     case "ADD_MUSIC": {
-      const isRepeat = state.allMusics.findIndex((music) => music.title === action.value.title);
+      const isRepeat = state.allMusics.findIndex(
+        (music) => music.title === action.value.title
+      );
 
       if (isRepeat < 0) {
         if (state.allMusics.length === 0) {
@@ -137,5 +140,5 @@ const useStateContext = (): IStateContext => {
   return useContext(StateContext as Context<IStateContext>);
 };
 
-export {StateProvider}
-export {useStateContext}
+export { StateProvider };
+export { useStateContext };

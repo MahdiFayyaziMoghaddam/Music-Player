@@ -22,4 +22,4 @@ export const controlsSlice = createSlice({
   },
 });
 
-export const { setVolume } = controlsSlice.actions;
+export const controlsActions = controlsSlice.actions;
